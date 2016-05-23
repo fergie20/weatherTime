@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tbilisi</string>
+    <string name="day">Day </string>
+    <string name="night">Night </string>
+    <string name="sunrise">Sunrise </string>
+    <string name="sunset">Sunset </string>
+</resources>
