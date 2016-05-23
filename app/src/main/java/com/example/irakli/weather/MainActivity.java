@@ -60,13 +60,12 @@ public class MainActivity extends AppCompatActivity {
         v.setText(date);
 
 
-        // Json object request
+         // Json object request
          requestQueue = Volley.newRequestQueue(getApplicationContext());
          JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, "http://api.openweathermap.org/data/2.5/forecast/daily?q=tbilisi&mode=Json&units=metric&cnt=14&appid=f550bc7203a1aa922c37ed40539b9186", "",
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-
                         try {
                             JSONArray listArray = response.getJSONArray("list");
                             JSONObject listArrayItem = (JSONObject) listArray.get(0);
@@ -82,10 +81,10 @@ public class MainActivity extends AppCompatActivity {
 
                             JSONArray weatherArray = listArrayItem.getJSONArray("weather");
                             JSONObject weatherArrayItem = (JSONObject) weatherArray.get(0);
-                            int weatherId = weatherArrayItem.getInt("id");
-                            String main = weatherArrayItem.getString("main");
+                            //int weatherId = weatherArrayItem.getInt("id");
+                            //String main = weatherArrayItem.getString("main");
                             String description = weatherArrayItem.getString("description");
-                            String weatherIcon = weatherArrayItem.getString("icon");
+                            //String weatherIcon = weatherArrayItem.getString("icon");
 
 
                             // Set values in user interface
